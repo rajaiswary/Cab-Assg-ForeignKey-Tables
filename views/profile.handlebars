@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id = "cab">
+         <div class="row">
+    <div class="col-sm-3">
+        <h2 class = "text-center">Welcome to Your Profile</h2>
+        <div>
+            <a href = "./booking">Book a CAB!!</a>
+        </div>
+        <div>
+            <a href = "./user-index">Click here to view your details</a>
+        </div>
+    </div>
+<table class="table table-striped mt-4">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone No</th>
+            <th>Password</th>
+            <th>Age</th>
+            <th>Country</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+        </tr>
+        <tr>
+
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.phone}}</td>
+            <td>{{data.password}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.country}}</td>
+             <td>
+                <a href="/update/{{data.id}}">Edit</a>  </td>
+                <td><a href="/delete/{{data.id}}" class="text-danger" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
+                </td>
+            
+           
+        </tr>
+      
+    </table>
+   
+</div>
+
+<script>
+
+    
+</script>
+</body>
+</html>

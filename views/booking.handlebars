@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <h1 class = "text-center">Book Now!</h1>
+        <div class="col-sm-6 offset-sm-3">
+            
+           <form  method ="post">
+             <div>
+                <label for = "pickup">Enter your pickup location</label>
+                <input type = "text" name = "pickup" id = "pickup" class = "form-control" placeholder = "Cochin">
+            </div>
+            <div>
+                <label for="destination">Enter your destination</label>
+                <input type = "text" name = "destination" id = "destination" class = "form-control" placeholder = "Trivandrum">
+            </div>
+            <div>
+                <label for = "date" >Enter the pickup date</label>
+                <input type = "date" name = "date" id = "date" class = "form-control">
+            </div>
+            <div>
+                <label for = "time">Schedule your time</label>
+                <input type = "time" name = "time" id = "time" class = "for-control">
+            </div>
+            <div>
+              <fieldset class  = "form-control">
+                <legend class = "form-control">Preffered Cab Type</legend>
+                <input type = "checkbox" name = "cars" value = "swift"><label for="swift">Swift</label><br>
+                <input type = "checkbox" name = "cars" value= "wagonr"><label for="wagonr">Wagonr</label><br>
+                <input type = "checkbox" name = "cars" value = "sedan"><label for="sedan">Sedan</label>
+              </fieldset>
+            </div>
+            <div class="d-grid mt-3">
+                <button type = "submit" class = "btn btn-primary">Book</button>
+            </div>
+           </form>
+
+        </div>
+    </div>
+  </div>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
