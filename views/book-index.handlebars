@@ -1,0 +1,43 @@
+<head>
+    <link rel = "stylesheet" href = "../static/css/bookstyle.css">
+</head>
+
+
+<body class = "booking">
+
+<h1 class="text-center">Bookings</h1>
+
+
+<div class="container">
+    <table class="table table-striped mt-4">
+        <tr>
+            <th>Bookingid</th>
+            <th>PickUp Location</th>
+            <th>Destination</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Cab Type</th>
+            <th>User ID</th>
+            <th>Driver Id</th>
+        </tr>
+        <tr>
+            {{#each data}}
+            <td>{{this.bookingid}}</td>
+            <td>{{this.pickup}}</td>
+            <td>{{this.destination}}</td>
+            <td>{{this.date}}</td>
+            <td>{{this.time}}</td>
+            <td>{{this.cabtype}}</td>
+            <td>{{this.userId}}</td>
+            <td>{{this.driverId}}</td>
+        </tr>
+           {{/each}}
+    </table>
+
+</div>
+
+
+
+</body>
+
+

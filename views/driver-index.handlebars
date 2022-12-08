@@ -1,0 +1,41 @@
+<head>
+    <link rel = "stylesheet" href = "../static/css/bookstyle.css">
+</head>
+
+
+<body class = "booking">
+    
+
+<h1 class="text-center">Drivers</h1>
+    <div class="container">
+        <table class="table table-striped mt-3">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone No</th>
+                <th>Password</th>
+                <th>Vehicle No</th>
+                <th>License No</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+
+            {{#each data}}
+            <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.phone}}</td>
+                <td>{{this.password}}</td>
+                <td>{{this.vehicleno}}</td>
+                <td>{{this.licenseno}}</td>
+                <td><a href = "/driver-update/{{this.id}}">Edit</a></td>
+                <td><a href = "/delete/{{this.id}}" class="text-danger" onclick="return confirm('Are you sure you want to delete this')">Delete</a></td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+
+
+</body>

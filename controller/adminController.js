@@ -1,4 +1,4 @@
-const user = require('../model/register');
+const {User,Driver,Book} = require('../model/register');
 
 // module.exports.fetchData = (req,res,next) => {
 //     let arr = [];
@@ -13,7 +13,7 @@ const user = require('../model/register');
 // }
 
 module.exports.fetchData= async (req,res,next)=>{
-    let userfromDb = await user.User.findAll();
+    let userfromDb = await User.findAll();
     if (userfromDb != null)
     {
         res.render('user-index',{
@@ -21,3 +21,30 @@ module.exports.fetchData= async (req,res,next)=>{
         })
     }
 }
+
+module.exports.fetchDataDriver = async (req,res,next)=>{
+    let userfromDb = await Driver.findAll();
+    userfromDb = JSON.parse(JSON.stringify(userfromDb));
+    console.log(userfromDb)
+
+    if (userfromDb != null)
+    {
+        res.render('driver-index',{
+            data: userfromDb
+        })
+    }
+}
+
+module.exports.fetchDataBook = async(req,res,next)=>{
+    let userFromDb = await Book.findAll();
+    userFromDb = JSON.parse(JSON.stringify(userFromDb));
+
+    if(userFromDb != null)
+    {
+        res.render('book-index',{
+            data : userFromDb
+        })
+    }
+}
+
+

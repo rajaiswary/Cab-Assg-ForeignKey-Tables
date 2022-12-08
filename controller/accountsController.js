@@ -17,14 +17,14 @@ function showData(arg,req,res){
 res.redirect('/profile')
 module.exports.data = arg;
 }
+
 module.exports.loginPost = async(req,res,next)=>{
     const{email,password} = req.body;
    
     const userFromDb = await user.User.findOne(
     {
         where : {email : email, password : password}
-
-    }) 
+    });
 
     if(email == "admin@gmail.com" && password == "admin")
     {
@@ -32,24 +32,21 @@ module.exports.loginPost = async(req,res,next)=>{
     }
 
        
-        if(userFromDb == null)
-        {
-           return res.render('login', { message : "User does not exist"});
-        }
-        
-        // res.render('/user-index',{
-        //     data:userFromDb
-        // })
-        
-        showData(JSON.stringify(userFromDb),req,res)
+    if(userFromDb == null)
+    {
+        return res.render('login', { message : "User does not exist"});
     }
 
-   
+    req.session.userId = userFromDb.dataValues.id;
+    console.log(req.session.userId);
     
-
+    // res.render('/user-index',{
+    //     data:userFromDb
+    // })
     
-
-
+    showData(JSON.stringify(userFromDb),req,res)
+}
+    
 module.exports.register = (req,res,next)=>{
     res.render('register');
 }
